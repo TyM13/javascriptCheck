@@ -8,13 +8,25 @@ export default {
 methods: {
     show_info: function() {
          for (let i = 0; i < this.tweets.length; i++) {
-      document.body.insertAdjacentHTML(
+             document.body.insertAdjacentHTML(
         `afterbegin`,
         `<h1>Tweet:${this.tweets[i]}</h1>
-        <p>friends:${this.num_friends}</p>
-         <p>you're logged in</p>`
-      );
-    }
+        
+         `
+      )
+         }
+            if( this.logged_in === true) {
+                document.body.insertAdjacentHTML(`afterbegin`, `<p>logged in:${this.logged_in}</p>
+                <p>friends:${this.num_friends}</p>`)
+                
+            }else{
+                document.body.insertAdjacentHTML(`afterbegin`, `<p>logged in:false</p>`)
+            }
+
+            
+     
+    
+    
     }
 },
 
