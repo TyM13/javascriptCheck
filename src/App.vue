@@ -17,8 +17,7 @@ export default {
 }
 </script>
 
-<s
-    ScriptExampletyle>
+<style>
 
 
 </style>
